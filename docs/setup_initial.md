@@ -8,9 +8,11 @@ This note covers every steps needed to set up a machine and connect it gcloud
 2. click `Console` on the top right corner
 3. Search `Compute Engine` in the search bar
 4. Click `CREATE INSTANCE` below the Compute Engine
-    1. Boot disk to pick os
-    2. Enable http, https connection 
+    1. Decide the regions and zones. Pick the region with the gpu support.
+    2. Boot disk to pick os
+    3. Enable http, https connection 
 5. After login onto the instance, run `sudo apt-get update`
+
 
 
 ## Connecting to the instance from terminal
@@ -39,7 +41,6 @@ To make sure the ssh connect enable X11Forwarding, add `-- -X` at the end of gcl
 At this point, we should be able to login the compute engine through mac terminal. And we should be able to use applications with gui. The next steps are the server configurations 
 1. install zsh, and put zsh in the bashrc
 2. Install neovim. Go to `~/.config` and `clone sigcyc/nvim`
-
 
 ## Useful notes
 1. It might be easy to check the manual. e.g, I fixed the bug on the forwarding by checking the manual 
