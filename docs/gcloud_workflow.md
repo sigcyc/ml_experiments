@@ -13,7 +13,7 @@ In order to save some money, I like to switch from my low cost machine to T4. He
 5. Go to `Machine configuration -> GPUs`, add the GPU you like
 
 ## Login 
-Run `gcloud compute ssh --zone "us-east1-d" "yichenc@instance-1" --project "arctic-kiln-391812" -- -X`
+Run `gcloud compute ssh --zone "southamerica-east1-c" "yichenc@instance-2" --project "arctic-kiln-391812" -- -X`
 
 ## Errors
 1. Instances with guest accelerators do not support live migration.
