@@ -27,7 +27,7 @@ This is the most complicated side on the setup. I will divide the contents into 
 - clipboard, particular setup for clipboard
 
 ### Server side
-We first need to enable the x11 forwarding. A useuul webpage is [here](https://myshittycode.com/2022/02/23/gcp-accessing-gui-based-software-in-gce-from-mac-using-x11)
+We first need to enable the x11 forwarding. A useful webpage is [here](https://myshittycode.com/2022/02/23/gcp-accessing-gui-based-software-in-gce-from-mac-using-x11)
 
 ### Client side
 `brew install xquartz`
@@ -40,8 +40,21 @@ At this point, we should be able to login the compute engine through mac termina
 1. install zsh, and put zsh in the bashrc
 2. Install neovim. Go to `~/.config` and `clone sigcyc/nvim`
 
+## Set GPU quota
+By default, the account will allow 0 GPUs to 
+1. Search `IAM & Admin`
+2. Click `Quota` on the right side
+3. Differnt from the webpage, type `Metrics` first, and then type `gpus_all_regions`
+See [here](https://www.reddit.com/r/cloudygamer/comments/agzh9w/how_to_fix_google_cloud_gpu_quota_issue/?onetap_auto=true)
+
+
+## Install CUDA
+Follow the script [here](https://cloud.google.com/compute/docs/gpus/install-drivers-gpu)
+To check the cuda version, run `nvidia-smi`
+Install jax with cuda support, follow [here](https://jax.readthedocs.io/en/latest/installation.html)
 
 ## Useful notes
 1. It might be easy to check the manual. e.g, I fixed the bug on the forwarding by checking the manual 
 `gcloud compute ssh --help`
-
+2. Getting a prompt that doesn't show the environment name
+Check carefully if .zshrc has set `prompt adam1` somewhere
