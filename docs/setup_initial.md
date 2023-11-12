@@ -39,8 +39,9 @@ To make sure the ssh connect enable X11Forwarding, add `-- -X` at the end of gcl
 
 ## Server setup after GUI
 At this point, we should be able to login the compute engine through mac terminal. And we should be able to use applications with gui. The next steps are the server configurations 
-1. install zsh, and put zsh in the bashrc
+1. Install oh-my-zsh. Be careful that this is different from the bare zsh
 2. Install neovim. Go to `~/.config` and `clone sigcyc/nvim`
+3. install mamba
 
 ## Useful notes
 1. It might be easy to check the manual. e.g, I fixed the bug on the forwarding by checking the manual 
