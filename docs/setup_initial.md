@@ -34,9 +34,13 @@ To make sure the ssh connect enable X11Forwarding, add `-- -X` at the end of gcl
 
 ## Server setup 
 1. After login onto the instance, run `sudo apt-get update`
-1. We first need to enable the x11 forwarding. A useful webpage is [here](https://myshittycode.com/2022/02/23/gcp-accessing-gui-based-software-in-gce-from-mac-using-x11).   At this point, we should be able to login the compute engine through mac terminal. And we should be able to use applications with gui. The next steps are the server configurations 
+1. We first need to enable the x11 forwarding. A useful webpage is [here](https://myshittycode.com/2022/02/23/gcp-accessing-gui-based-software-in-gce-from-mac-using-x11). At this point, we should be able to login the compute engine through mac terminal. And we should be able to use applications with gui. The next steps are the server configurations
+    1. `grep X11Forwarding /etc/ssh/sshd_config`
 2. Install zsh and [oh-my-zsh](https://ohmyz.sh). Change theme to `ZSH_THEME="maran"` 
-3. Install neovim through appimage at [here](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+3. Install neovim through appimage at [here](https://github.com/neovim/neovim/blob/master/INSTALL.md). 
+    1. `sudo apt install fuse`
+    1. run `uname -m` to know the system architecture
+    2. run `curl -LO the_link_appimage`
 3. `sudo apt-get install neovim-qt`.
 4. Go to `/usr/bin`, delete the nvim, and then create a symbolic link to latest neovim appimage
 5. Add git permsion [tokens](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
