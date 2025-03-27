@@ -27,9 +27,12 @@ This is the most complicated side on the setup. I will divide the contents into 
 
 
 ### Client side
+#### mac system 
 `brew install xquartz`
 Override all xquartz short keys by going to System Preferences -> Keyboard -> Shortcuts -> App Shortcuts -> add application -> utilities / xquartz map the exact name on the menu item
 To make sure the ssh connect enable X11Forwarding, add `-- -X` at the end of gcloud command. For example
+#### windows system
+install VcXsrv
 `gcloud compute ssh --zone "us-east1-d" "instance-1" --project "arctic-kiln-391812" -- -X`
 
 ## Server setup 
@@ -43,7 +46,7 @@ To make sure the ssh connect enable X11Forwarding, add `-- -X` at the end of gcl
     2. run `curl -LO the_link_appimage`
 3. `sudo apt-get install neovim-qt`.
 4. Go to `/usr/bin`, delete the nvim, and then create a symbolic link to latest neovim appimage
-5. Add git permsion [tokens](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+5. Add git permission [tokens](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 4. Go to `~/.config` and `clone sigcyc/nvim`
 5. Install [micromamba](https://mamba.readthedocs.io/en/latest/micromamba-installation.html#umamba-install)
 6. `micromamba install jax` and `micromamba install jupyter`, put `micromamba activate sigcyc1` at the end of `~/.zshrc`
